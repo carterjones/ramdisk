@@ -7,7 +7,7 @@ import (
 	"os/exec"
 	"path/filepath"
 
-	"github.com/mroth/ramdisk/datasize"
+	"github.com/carterjones/ramdisk/datasize"
 )
 
 // DarwinPlatformImplementation is the implementation for macOS systems.

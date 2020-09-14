@@ -8,8 +8,8 @@ import (
 	"os"
 	"os/exec"
 
-	"github.com/mroth/ramdisk"
-	"github.com/mroth/ramdisk/datasize"
+	"github.com/carterjones/ramdisk"
+	"github.com/carterjones/ramdisk/datasize"
 )
 
 const (
@@ -25,15 +25,17 @@ Usage:
 
 Options:
   -h -help      Show this screen.
+  -d            Print the resulting device path to stdout.
   -v            Verbose output.
   -size=<mb>    Size in megabytes [default: %v].
 
-For more information see https://github.com/mroth/ramdisk
+For more information see https://github.com/carterjones/ramdisk
 `, ramdisk.Version, defaultSize)
 }
 
 func main() {
 	size := flag.Uint64("size", defaultSize, "Size in megabytes")
+	devPath := flag.Bool("d", false, "Print the resulting device path to stdout")
 	verbose := flag.Bool("v", false, "Verbose output")
 	flag.Usage = usage
 	flag.Parse()
@@ -63,6 +65,9 @@ func main() {
 			*size, rd.DevicePath, rd.MountPath)
 		fmt.Fprintf(os.Stderr, "To later remove do: `ramdisk destroy %v`\n",
 			rd.DevicePath)
+		if *devPath {
+			fmt.Println(rd.DevicePath)
+		}
 	case "destroy":
 		device := flag.Arg(1)
 		if device == "" {

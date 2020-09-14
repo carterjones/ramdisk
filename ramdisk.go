@@ -7,15 +7,15 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/mroth/ramdisk/datasize"
+	"github.com/carterjones/ramdisk/datasize"
 )
 
 // Version is the semantic version of this package.
-const Version = "0.1.0"
+const Version = "0.2.0"
 
 // defaults that are used for any zero value in Options
 const (
-	DefaultSize = 32 * datasize.MB
+	DefaultSize = 1 * datasize.MB
 )
 
 // Options are optional values that will override default behavior
@@ -49,7 +49,7 @@ var implementation PlatformImplementation
 // Create a new ramdisk, using the implementation for the currently active
 // platform.
 //
-// If you wish to use all default values, simply supply a zero-value struct.
+// If you wish to use all default values, supply a zero-value struct.
 //
 //     rd, err := ramdisk.Create(Options{})
 //

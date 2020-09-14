@@ -1,4 +1,11 @@
-.PHONY: test test-docker
+.PHONY: build test test-docker
+
+build:
+	mkdir -p bin
+	go build -o ./bin/ramdisk ./cmd/ramdisk
+
+install: build
+	./install.sh
 
 test:
 	go test -v

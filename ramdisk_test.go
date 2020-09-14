@@ -14,7 +14,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/mroth/ramdisk"
+	"github.com/carterjones/ramdisk"
 )
 
 /* basic test sequence I'm thinking about

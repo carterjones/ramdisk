@@ -9,8 +9,8 @@ import (
 // LinuxPlatformImplementation is the implementation for Linux systems.
 //
 // The Linux implementation likely *requires sudo* to function on most distros.
-// If you want a sudo-less option, you can simply use /dev/shm instead on most
-// modern Linux platforms.
+// If you want a sudo-less option, you can use /dev/shm instead on most modern
+// Linux platforms.
 type LinuxPlatformImplementation struct{}
 
 func init() {

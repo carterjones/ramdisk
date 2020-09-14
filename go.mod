@@ -1,1 +1,3 @@
-module github.com/mroth/ramdisk
+module github.com/carterjones/ramdisk
+
+go 1.15
