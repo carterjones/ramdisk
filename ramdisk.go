@@ -11,7 +11,7 @@ import (
 )
 
 // Version is the semantic version of this package.
-const Version = "0.2.0"
+const Version = "0.2.1"
 
 // defaults that are used for any zero value in Options
 const (

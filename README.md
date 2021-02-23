@@ -9,7 +9,7 @@ Help screen:
 
 ```console
 $ ramdisk -h
-ramdisk 0.2.0 🐏
+ramdisk 0.2.1 🐏
 
 Usage:
   ramdisk [options] create [<mount-path>]
